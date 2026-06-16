@@ -1,0 +1,2 @@
+index=main "Failed password"
+| stats count as total_attacks
