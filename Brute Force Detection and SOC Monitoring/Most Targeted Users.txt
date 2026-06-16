@@ -1,0 +1,5 @@
+index=main "Failed password"
+| rex "Failed password for (?:invalid user )?(?<user>\w+)"
+| stats count as attempts by user
+| sort -attempts
+| head 10
