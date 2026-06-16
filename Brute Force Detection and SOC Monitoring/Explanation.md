@@ -111,6 +111,8 @@ To simulate SOC investigation workflows, I implemented drilldowns:
 
 This transforms the dashboard into an **interactive investigation tool**.
 
+Drilldown search strings:
+
 ---
 
 ## 📌 Step 9: Key Learnings
