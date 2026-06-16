@@ -1,5 +1,5 @@
 <dashboard version="1.1" theme="dark">
-  <label>Brute Force Detection and SOC Monitoring</label>
+  <label>Brute Force Detection and SOC Monitoring Dashboard</label>
   <description>This dahboard focuses on detecting and analyzing brute-force login attempts using Splunk. It simulates real-world SOC monitoring by identifying suspicious login patterns and visualizing attack sources globally.</description>
   <row>
     <panel>
@@ -220,7 +220,7 @@
         </format>
         <format type="number" field="threat_level"></format>
         <drilldown>
-          <link target="_blank">search?q=index%3Dmain%20%22Failed%20password%22%0A%7C%20rex%20%22from%20(%3F%3Cip%3E%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B)%22%0A%7C%20search%20ip%3D$ip.value$&amp;earliest=0&amp;latest=now</link>
+          <link target="_blank">search?q=index%3Dmain%20%22Failed%20password%22%0A%7C%20rex%20%22from%20(%3F%3Cip%3E%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B)%22%0A%7C%20search%20ip%3D%22$row.ip$%22&amp;earliest=0&amp;latest=now</link>
         </drilldown>
       </table>
     </panel>
@@ -278,7 +278,7 @@
         <option name="totalsRow">false</option>
         <option name="wrap">true</option>
         <drilldown>
-          <link target="_blank">search?q=index%3Dmain%20%22Failed%20password%22%0A%7C%20rex%20%22from%20(%3F%3Cip%3E%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B)%22%0A%7C%20search%20ip%3D$ip.value$&amp;earliest=0&amp;latest=undefined</link>
+          <link target="_blank">search?q=index%3Dmain%20%22Failed%20password%22%0A%7C%20rex%20%22from%20(%3F%3Cip%3E%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B)%22%0A%7C%20search%20ip%3D%22$row.ip$%22&amp;earliest=0&amp;latest=</link>
         </drilldown>
       </table>
     </panel>
