@@ -97,7 +97,7 @@ I created a Splunk dashboard with multiple panels:
 * Attack Map (Global attacks)
 * Threat Level(Tables)
 * Attack Count Visualization(Total Attacks Count)
-* Geo locations of Attacks
+* IP locations of Attacks
 
 ---
 
