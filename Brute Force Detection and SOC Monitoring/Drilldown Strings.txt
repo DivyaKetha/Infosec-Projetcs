@@ -1,23 +1,17 @@
-''' FOR TOP ATTACKING IPS DASHBOARD '''
+-- Top Attacking IPs
 index=main "Failed password" | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)" | search ip=$row.ip$
 
-''' FOR MOST TARGETED USERS DASHBOARD '''
-index=main "Failed password"
-| rex "Failed password for (?:invalid user )?(?<user>\w+)"
-| search user=$row.user$
+-- Most Targeted Users
+index=main "Failed password" | rex "Failed password for (?:invalid user )?(?<user>\w+)" | search user=$row.user$
 
-''' FOR ATTACK TIMELINE DASHBOARD '''
+-- Attack Timeline
 index=main "Failed password" | bin _time span=1m | search _time=$click.value$
 
-''' FOR THREAT LEVEL DASHBOARD '''
-index=main "Failed password"
-| rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
-| search ip=$ip.value$
+-- Threat Level
+index=main "Failed password" | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)" | search ip=$ip.value$
 
-''' FOR TOTAL ATTACKS DASHBOARD '''
+-- Total Attacks
 index=main "Failed password"
 
-''' FOR ATTACKS PER IP WITH LOCATIONS DASHBOARD '''
-index=main "Failed password"
-| rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
-| search ip=$ip.value$
+-- Attacks Per IP with Locations
+index=main "Failed password" | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)" | search ip=$ip.value$
