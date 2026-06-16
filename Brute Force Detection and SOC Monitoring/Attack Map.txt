@@ -1,0 +1,5 @@
+index=main "Failed password"
+| rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
+| iplocation ip
+| where isnotnull(lat) AND isnotnull(lon)
+| geostats count latfield=lat longfield=lon
