@@ -1,0 +1,5 @@
+index=main "Failed password"
+| rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
+| iplocation ip
+| stats count as attempts by ip Country lat lon
+| sort -attempts
