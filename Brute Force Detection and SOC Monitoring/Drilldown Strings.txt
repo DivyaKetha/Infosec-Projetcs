@@ -12,7 +12,7 @@ index=main "Failed password" | bin _time span=1m | search _time=$click.value$
 ''' FOR THREAT LEVEL DASHBOARD '''
 index=main "Failed password"
 | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
-| search ip=$ip.value$
+| search ip=$row.ip$
 
 ''' FOR TOTAL ATTACKS DASHBOARD '''
 index=main "Failed password"
@@ -20,4 +20,4 @@ index=main "Failed password"
 ''' FOR ATTACKS PER IP WITH LOCATIONS DASHBOARD '''
 index=main "Failed password"
 | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
-| search ip=$ip.value$ MAKE IT MD TEXT bold heading make queries as code
+| search ip=$row.ip$ 
