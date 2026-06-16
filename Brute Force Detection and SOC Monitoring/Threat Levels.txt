@@ -1,0 +1,9 @@
+index=main "Failed password"
+| rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
+| stats count as attempts by ip
+| eval threat_level=case(
+    attempts>1000, "HIGH",
+    attempts>200, "MEDIUM",
+    1=1, "LOW"
+)
+| sort -attempts
