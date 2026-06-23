@@ -1,1 +1,0 @@
-index=main "Failed password" | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)" | stats count as attempts by ip | lookup blocked_ips.csv ip OUTPUT ip as blocked_ip | eval status = if(isnull(blocked_ip), "Active", "Blocked") | sort -attempts
