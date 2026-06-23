@@ -1,0 +1,1 @@
+index=main "Failed password" | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)" | stats count as attempts by ip | eval risk_level = case(attempts > 50, "Critical", attempts > 20, "High", attempts > 10, "Medium", true(), "Low") | table ip, attempts, risk_level | sort -attempts
