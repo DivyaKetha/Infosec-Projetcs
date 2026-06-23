@@ -1,1 +1,0 @@
-index=main "Failed password" | stats count as critical_alerts
