@@ -1,0 +1,10 @@
+
+Failed Login Attempts per IP:
+
+192.168.1.10 → 2 attempts
+192.168.1.20 → 1 attempts
+192.168.1.30 → 3 attempts
+
+Suspicious Activity:
+
+ALERT: 192.168.1.30 is suspicious with 3 attempts
