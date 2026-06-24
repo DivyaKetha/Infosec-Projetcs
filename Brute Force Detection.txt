@@ -1,1 +1,0 @@
-index=main ("Failed password" OR "Accepted password") | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)" | stats count(eval(searchmatch("Failed password"))) as failed, count(eval(searchmatch("Accepted password"))) as successful by ip | where failed > 20 AND successful > 0 | sort -failed
