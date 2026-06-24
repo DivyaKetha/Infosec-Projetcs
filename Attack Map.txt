@@ -1,5 +1,0 @@
-index=main "Failed password"
-| rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
-| iplocation ip
-| where isnotnull(lat) AND isnotnull(lon)
-| stats count by Country | geom geo_countries featureIdField=Country
