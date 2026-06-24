@@ -1,0 +1,2 @@
+index=main "Failed password" | rex "for (?:invalid user )?(?<user>\w+)" | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)" | table _time, host, user, ip | sort -_time | head 100
+
