@@ -1,2 +1,0 @@
-index=main "Failed password" | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)" | stats count as attempts by ip | sort -attempts | head 20
-
