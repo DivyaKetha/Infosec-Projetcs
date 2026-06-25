@@ -38,10 +38,10 @@ Color-coded table assigning risk levels based on attempt thresholds:
 
 | Attempts | Risk Level |
 |----------|------------|
-| >50 | Critical (#9E2520) |
-| >20 | High (#D41F1F) |
-| >10 | Medium (#E3723A) |
-| ≤10 | Low (#F98C83) |
+| >50 | Critical |
+| >20 | High  |
+| >10 | Medium |
+| ≤10 | Low  |
 
 ---
 
