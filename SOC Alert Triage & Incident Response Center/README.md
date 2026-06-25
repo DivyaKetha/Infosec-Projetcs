@@ -97,7 +97,7 @@ All tables include drilldown links to:
 
 ## Dependencies
 
-- **Splunk Cloud
+- **Splunk Cloud**
 - **MaxMind GeoIP** database for iplocation command
 - **blocked_ips.csv** in lookup directory
 - **Splunk REST API** for fired alerts
