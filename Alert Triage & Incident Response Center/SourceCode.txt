@@ -70,6 +70,15 @@
             "dataSources": {
                 "primary": "ds_5oChEEZO"
             },
+            "eventHandlers": [
+                {
+                    "options": {
+                        "newTab": true,
+                        "type": "auto"
+                    },
+                    "type": "drilldown.linkToSearch"
+                }
+            ],
             "options": {
                 "dataValuesDisplay": "off",
                 "legendDisplay": "right",
@@ -220,10 +229,19 @@
             "dataSources": {
                 "primary": "ds_pDGi8bjS"
             },
+            "eventHandlers": [
+                {
+                    "options": {
+                        "newTab": true,
+                        "type": "auto"
+                    },
+                    "type": "drilldown.linkToSearch"
+                }
+            ],
             "options": {
                 "center": [
-                    24.431612150058783,
-                    22.013858843450635
+                    27.49726408045008,
+                    46.68432019620241
                 ],
                 "layers": [
                     {
@@ -233,7 +251,7 @@
                     }
                 ],
                 "showBaseLayer": true,
-                "zoom": 1
+                "zoom": 2.0592353857020598
             },
             "title": "Attack Map",
             "type": "splunk.map"
@@ -265,6 +283,15 @@
             "dataSources": {
                 "primary": "ds_fONTtp9n"
             },
+            "eventHandlers": [
+                {
+                    "options": {
+                        "newTab": true,
+                        "type": "auto"
+                    },
+                    "type": "drilldown.linkToSearch"
+                }
+            ],
             "options": {
                 "dataValuesDisplay": "off",
                 "legendDisplay": "right",
