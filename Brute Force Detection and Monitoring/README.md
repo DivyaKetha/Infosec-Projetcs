@@ -1,4 +1,4 @@
-# 🚨 Brute Force Detection & SOC Monitoring (Splunk)
+# 🚨 Brute Force Detection & Monitoring (Splunk)
 
 ## 📌 Overview
 
