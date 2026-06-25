@@ -102,21 +102,6 @@ All tables include drilldown links to:
 - **blocked_ips.csv** in lookup directory
 - **Splunk REST API** for fired alerts
 
----
-
-## Customization
-
-### Adjust Risk Thresholds
-Modify the case statement in the Risk Scoring search:
-```spl
-eval risk_level = case(attempts > YOUR_HIGH, "Critical", ...)
-```
-
-### Modify Blocklist
-Update `blocked_ips.csv` with new IPs to mark as blocked.
-
-### Change Time Range Default
-Set `defaultValue` in input_global_trp options.
 
 
 
