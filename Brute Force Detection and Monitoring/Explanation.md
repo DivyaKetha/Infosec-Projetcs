@@ -1,4 +1,4 @@
-# 🧠 Brute Force Detection & SOC Monitoring – Full Project Explanation
+# 🧠 Brute Force Detection & Monitoring – Full Project Explanation
 
 ## 📌 Step 1: Data Ingestion
 
