@@ -26,26 +26,6 @@ This tool parses authentication logs to track failed login attempts, counts occu
 - Python 3.6 or higher
 - Log file in standard authentication format
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/log-analyzer.git
-cd log-analyzer
-
-# No additional dependencies required!
-```
-
-### Basic Usage
-
-```bash
-# Run with default log path
-python log_analyzer.py
-
-# Or specify custom log file (if implemented)
-python log_analyzer.py --log /var/log/auth.log
-```
-
 ---
 
 ## 📊 Sample Output
@@ -87,19 +67,6 @@ Feb 24 10:15:32 server sshd[1234]: Failed password for root from 192.168.1.105 p
 
 ---
 
-## 📁 Project Structure
-
-```
-log-analyzer/
-├── logs/
-│   └── sample.log          # Example log file
-├── log_analyzer.py         # Main script
-├── README.md               # This file
-└── requirements.txt        # (Optional) Dependencies list
-```
-
----
-
 ## 🎯 Use Cases
 
 | Use Case | Benefit |
@@ -119,20 +86,12 @@ log-analyzer/
 - No real-time monitoring capabilities
 - Command-line arguments not fully implemented
 
-**Planned Features:**
-- [ ] Command-line argument support (`argparse`)
-- [ ] CSV/JSON export functionality
-- [ ] Time-based analysis (attempts per minute)
-- [ ] Geospatial IP lookup
-- [ ] Integration with SIEM tools
-
 ---
 
 ## 🙏 Acknowledgments
 
 - Inspired by common cybersecurity use cases in SOC environments
 - Built for educational and practical security analysis
-- Special thanks to the open-source security community
 
 ---
 
